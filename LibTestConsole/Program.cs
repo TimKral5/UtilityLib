@@ -3,26 +3,24 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Collections.Generic;
+using System.Numerics;
 
 using UtilityLib.Converter.CSF;
+using static UtilityLib.Superior.SuperiorClass;
 namespace LibTestConsole
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			Dictionary<string, string> settings = new Dictionary<string, string>();
-			settings.Add("setting1", "value1");
-			settings.Add("setting2", "value2");
-			string result = CsfConverter.ConvertToString(settings);
-			Console.WriteLine(result);
-
-			Dictionary<string, string> resultDict = CsfConverter.ConvertToDictionary(result);
-
-			foreach (KeyValuePair<string, string> item in resultDict)
+			object TEST(object zero)
 			{
-				Console.WriteLine("Setting: ["+item.Key+"], Value: ["+item.Value+"]");
+				return 1;
 			}
+			ST_METHOD_SET("x", TEST);
+			ST_METHOD_EXECUTE("x", null, out object result);
+			int res = (int)result;
+			Console.WriteLine(res);
 		}
 	}
 }
