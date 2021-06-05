@@ -78,7 +78,8 @@ namespace UtilityLib.Extension
 
 		private static string _GetCentered(string inputString, string seperator1, string seperator2)
 		{
-			return inputString.Split(seperator1)[1].Split(seperator2)[0];
+			//return inputString.Split(seperator1)[1].Split(seperator2)[0];
+			return "";
 		}
 		#endregion
 	}

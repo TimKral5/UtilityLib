@@ -1,26 +1,16 @@
 ﻿using System;
-using System.Linq;
-using System.Reflection;
-using System.Threading;
 using System.Collections.Generic;
-using System.Numerics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UtilityLib.Superior;
 
-using UtilityLib.Converter.CSF;
-using static UtilityLib.Superior.SuperiorClass;
-namespace LibTestConsole
+namespace LibTestconsole
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			object TEST(object zero)
-			{
-				return 1;
-			}
-			ST_METHOD_SET("x", TEST);
-			ST_METHOD_EXECUTE("x", null, out object result);
-			int res = (int)result;
-			Console.WriteLine(res);
 		}
 	}
 }

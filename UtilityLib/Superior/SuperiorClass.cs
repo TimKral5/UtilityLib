@@ -24,9 +24,9 @@ namespace UtilityLib.Superior
 		/// <param name="name">index under wich the entered value (<paramref name="value"/>) is saved</param>
 		/// <param name="value">value used for processing</param>
 		/// <returns>bool that marks is the process was successful</returns>
-		public static bool ST_OBJECT_SET(string name, object value)
+		public static void ST_OBJECT_SET(string name, object value)
 		{
-			return objects.TryAdd(name, value);
+			objects.Add(name, value);
 		}
 
 		//ST_METHOD Get
@@ -41,9 +41,9 @@ namespace UtilityLib.Superior
 			return result;
 		}
 		//ST_METHOD Set
-		public static bool ST_METHOD_SET(string name, Func<object, object> method)
+		public static void ST_METHOD_SET(string name, Func<object, object> method)
 		{
-			return methods.TryAdd(name, method);
+			methods.Add(name, method);
 		}
 		//ST_METHOD Execute
 		public static bool ST_METHOD_EXECUTE(string name, object input, out object output)
