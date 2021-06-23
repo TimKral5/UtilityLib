@@ -71,6 +71,11 @@ namespace UtilityLib.ProgramEngine
 		public abstract void FixedUpdate();
 	}
 
+	public partial class BasicBehaviour
+	{
+		//public Func func;
+	}
+
 	/// <summary>
 	/// Engine for running class with Runnable-Attribute.
 	/// </summary>
